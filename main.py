@@ -8,7 +8,7 @@ f = open("dosya.txt","r")
 for i in range(5):
     mesaj = MIMEMultipart()
 
-    mesaj["from"] = "yakupsehmus@gmail.com"
+    mesaj["from"] = "mail"
 
     mesaj["to"] = f.readline()
 
@@ -27,7 +27,7 @@ for i in range(5):
 
         mail.starttls()
 
-        mail.login("yakupsehmus@gmail.com", "omuzomuza1907")
+        mail.login("mail", "şifre")
 
         mail.sendmail(mesaj["from"], mesaj["to"], mesaj.as_string())
 
